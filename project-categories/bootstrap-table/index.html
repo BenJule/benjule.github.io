@@ -196,39 +196,19 @@
            data-show-pagination-switch="true"
            data-pagination="true"
            data-side-pagination="server"
+           data-url="../json/nodes.json">
+        <thead>
+        <tr>
+            <th data-field="name" data-sortable="true">Knotenname</th>
+            <th data-field="model" data-sortable="true">Modell</th>
+            <th data-field="firmware" data-sortable="true">Firmware</th>
+            <th data-field="clientcount" data-sortable="true">Clients</th>
+            <th data-field="autoupdate" data-sortable="true">Autoupdate</th>
+        </tr>
+        </thead>
     </table>
 </div>
-<script>
-    $(function () {
-        $('#table').bootstrapTable({
-            url: '../json/nodes.json',
-            columns: [{
-                field: 'name',
-                title: 'Knotenname',
-                sortable: true
-            }, {
-                field: 'model',
-                title: 'Modell',
-                sortable: true
-            }, {
-                field: 'firmware',
-                title: 'Firmware',
-                sortable: true
-            }, {
-                field: 'clientcount',
-                title: 'Clients',
-                sortable: true
-            }, {
-                field: 'autoupdate',
-                title: 'Autoupdate',
-                sortable: true
-            }],
-            responseHandler: function (res) {
-                return res.messages;
-            }
-        });
-    });
-</script>
+
 <!-- Footer -->
 <div class="cta-mail">
     <div class="container text-center">
