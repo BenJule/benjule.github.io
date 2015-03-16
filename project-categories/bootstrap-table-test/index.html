@@ -184,7 +184,18 @@
 
 <div class="container">
         <h1>Use responseHandler option to handle your response data(<a href="https://github.com/wenzhixin/bootstrap-table/issues/353" target="_blank">#353</a>).</h1>
-        <table id="table"></table>
+        <table id="table"
+           data-toggle="table"
+           data-toolbar="#toolbar"
+           data-search="true"
+           data-show-refresh="true"
+           data-show-toggle="true"
+           data-show-columns="true"
+           data-show-export="true"
+           data-show-pagination-switch="true"
+           data-pagination="true"
+           data-side-pagination="server">
+        </table>
     </div>
 <script>
     $(function () {
