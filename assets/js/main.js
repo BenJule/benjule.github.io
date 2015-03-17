@@ -89,12 +89,6 @@ $(document).ready(function() {
                 ['Impact.js', 10],
                 ['Other', 20],
                 ['Ease.js', 22],
-                ['Box2D.js', 25],
-                ['WebGL', 28],
-                ['DOM', 30],
-                ['CSS', 40],
-                ['Canvas', 80],
-                ['Javascript', 90]
             ]
          }]
     });
