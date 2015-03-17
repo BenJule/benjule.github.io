@@ -50,6 +50,9 @@
 <!-- Start Bootstrap Custom CSS -->
 <link href="/assets/css/startbootstrap.css" rel="stylesheet" type="text/css">
 
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script src="http://code.highcharts.com/highcharts.js"></script>
+
 <!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -168,71 +171,38 @@
 <div class="container">
         <h1>The site is comming soon...(<a href="http://gw3.ff3l.net/bfs-ff3l/" target="_blank">#BFS-FF3L</a>).</h1>
         <table id="table"></table>
-    </div>
-<div id="container" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
-<script type="text/javascript">
-$(function () {
+</div>
 
-    // Radialize the colors
-    Highcharts.getOptions().colors = Highcharts.map(Highcharts.getOptions().colors, function (color) {
-        return {
-            radialGradient: { cx: 0.5, cy: 0.3, r: 0.7 },
-            stops: [
-                [0, color],
-                [1, Highcharts.Color(color).brighten(-0.3).get('rgb')] // darken
-            ]
-        };
-    });
+<!-- Content Highchart -->
+<div id="container" style="width:100%; height:400px;"></div>
 
-    // Build the chart
+<script> 
+  $(function () { 
     $('#container').highcharts({
         chart: {
-            plotBackgroundColor: null,
-            plotBorderWidth: null,
-            plotShadow: false
+            type: 'bar'
         },
         title: {
-            text: 'Browser market shares at a specific website, 2014'
+            text: 'Fruit Consumption'
         },
-        tooltip: {
-            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+        xAxis: {
+            categories: ['Apples', 'Bananas', 'Oranges']
         },
-        plotOptions: {
-            pie: {
-                allowPointSelect: true,
-                cursor: 'pointer',
-                dataLabels: {
-                    enabled: true,
-                    format: '<b>{point.name}</b>: {point.percentage:.1f} %',
-                    style: {
-                        color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
-                    },
-                    connectorColor: 'silver'
-                }
+        yAxis: {
+            title: {
+                text: 'Fruit eaten'
             }
         },
         series: [{
-            type: 'pie',
-            name: 'Browser share',
-            data: [
-                ['Firefox',   45.0],
-                ['IE',       26.8],
-                {
-                    name: 'Chrome',
-                    y: 12.8,
-                    sliced: true,
-                    selected: true
-                },
-                ['Safari',    8.5],
-                ['Opera',     6.2],
-                ['Others',   0.7]
-            ]
+            name: 'Jane',
+            data: [1, 0, 4]
+        }, {
+            name: 'John',
+            data: [5, 7, 3]
         }]
     });
 });
-
-
-        </script>
+</script>
 
 <!-- Footer -->
 <div class="cta-mail">
