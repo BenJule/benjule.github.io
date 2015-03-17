@@ -443,7 +443,7 @@ $files = $bfs->getFiles();
 <script src="./assets/js/jquery.base64.js"></script>
 <script src="./assets/js/bootstrap-table-flatJSON.min.js"></script>
 <script type="text/javascript" src="//code.highcharts.com/highcharts.js"></script>
-<script type="text/javascript" src="bfs.js"></script>
+<script type="text/javascript" src="/../bfs.js"></script>
 
 
 </body>
