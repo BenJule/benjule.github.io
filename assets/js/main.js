@@ -36,7 +36,7 @@ $(document).ready(function() {
         text: 'Tools developers plans to use to make html5 games (in %)'
      },
      xAxis: {
-        categories: ['Processing.js', 'Impact.js', 'Other', 'Ease.js', 'Box2D.js', 'WebGL', 'DOM', 'CSS', 'Canvas', 'Javascript']
+        categories: ['Processing.js', 'Impact.js', 'Other', 'Ease.js']
      },
      yAxis: {
         title: {
