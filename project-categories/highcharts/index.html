@@ -50,6 +50,16 @@
 <!-- Start Bootstrap Custom CSS -->
 <link href="/assets/css/startbootstrap.css" rel="stylesheet" type="text/css">
 
+<!-- Start Highchart Custom CSS -->
+<link href="/assets/css/main.css" rel="stylesheet" type="text/css">
+
+<!-- add scripts -->
+<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script src="http://code.highcharts.com/highcharts.js"></script>
+<script src="assets/js/gray.js"></script>
+<script src="assets/js/main.js"></script>
+
+
 <!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -168,71 +178,22 @@
 <div class="container">
         <h1>The site is comming soon...(<a href="http://gw3.ff3l.net/bfs-ff3l/" target="_blank">#BFS-FF3L</a>).</h1>
         <table id="table"></table>
-    </div>
-<div id="container" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
-<script type="text/javascript">
-$(function () {
+</div>
 
-    // Radialize the colors
-    Highcharts.getOptions().colors = Highcharts.map(Highcharts.getOptions().colors, function (color) {
-        return {
-            radialGradient: { cx: 0.5, cy: 0.3, r: 0.7 },
-            stops: [
-                [0, color],
-                [1, Highcharts.Color(color).brighten(-0.3).get('rgb')] // darken
-            ]
-        };
-    });
+<!-- Content Highchart -->
+<div class="container">
+  <div class="actions">
+    <button class="switcher" id="column">column</button>
+    <button class="switcher" id="area">area</button>
+    <button class="switcher" id="line">line</button>
+    <button class="switcher" id="spline">Spine</button>
+    <button class="switcher" id="areaspline">areaspline</button>
+  </div>
 
-    // Build the chart
-    $('#container').highcharts({
-        chart: {
-            plotBackgroundColor: null,
-            plotBorderWidth: null,
-            plotShadow: false
-        },
-        title: {
-            text: 'Browser market shares at a specific website, 2014'
-        },
-        tooltip: {
-            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-        },
-        plotOptions: {
-            pie: {
-                allowPointSelect: true,
-                cursor: 'pointer',
-                dataLabels: {
-                    enabled: true,
-                    format: '<b>{point.name}</b>: {point.percentage:.1f} %',
-                    style: {
-                        color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
-                    },
-                    connectorColor: 'silver'
-                }
-            }
-        },
-        series: [{
-            type: 'pie',
-            name: 'Browser share',
-            data: [
-                ['Firefox',   45.0],
-                ['IE',       26.8],
-                {
-                    name: 'Chrome',
-                    y: 12.8,
-                    sliced: true,
-                    selected: true
-                },
-                ['Safari',    8.5],
-                ['Opera',     6.2],
-                ['Others',   0.7]
-            ]
-        }]
-    });
-});
-
-
-        </script>
+<!-- two different charts -->
+  <div id="chart_1" class="chart"></div>
+  <div id="chart_2" class="chart"></div>
+</div>
 
 <!-- Footer -->
 <div class="cta-mail">
@@ -313,7 +274,6 @@ $(function () {
 <!-- JavaScript -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-<script src="http://code.highcharts.com/highcharts.js"></script>
 <script src="http://code.highcharts.com/modules/exporting.js"></script>
 <script src="./assets/js/docs.js"></script>
 <script src="./assets/js/startbootstrap.js"></script>
