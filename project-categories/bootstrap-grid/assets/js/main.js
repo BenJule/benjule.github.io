@@ -99,6 +99,36 @@ $(document).ready(function() {
          }]
     });
 
+    // third chart initialization
+    chart1 = new Highcharts.Chart({
+     chart: {
+        renderTo: 'chart_3',
+        type: 'column',
+        height: 350,
+     },
+     title: {
+        text: 'Tools developers plans to use to make html5 games (in %)'
+     },
+     xAxis: {
+        categories: ['Processing.js', 'Impact.js', 'Other', 'Ease.js', 'Box2D.js', 'WebGL', 'DOM', 'CSS', 'Canvas', 'Javascript']
+     },
+     yAxis: {
+        title: {
+           text: 'Interviewed'
+        }
+     },
+     series: [{
+        name: 'Dev #1',
+        data: [5, 10, 20, 22, 25, 28, 30, 40, 80, 90]
+     }, {
+        name: 'Dev #2',
+        data: [15, 15, 18, 40, 30, 25, 60, 60, 80, 70]
+     }, {
+        name: 'Dev #3',
+        data: [1, 3, 6, 0, 50, 25, 50, 60, 30, 100]
+     }]
+    });
+
     // Switchers (of the Chart1 type) - onclick handler
     $('.switcher').click(function () {  
         var newType = $(this).attr('id');
