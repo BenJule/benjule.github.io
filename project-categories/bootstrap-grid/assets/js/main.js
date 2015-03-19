@@ -161,9 +161,9 @@ $(document).ready(function() {
             data: [
                 ['0.6~exp20140811', 5],
                 ['2014.4a~20150315-beta', 10],
+                ['Raspbian', 25],
                 ['2014.4~exp20150206', 20],
                 ['2014.4~stable20150206', 22],
-                ['Raspbian', 25],
                 ['site-2014.4~exp20150215', 28],
                 ['snapshot~exp20150314', 30],
             ]
