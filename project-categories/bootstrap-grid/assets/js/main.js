@@ -100,7 +100,7 @@ $(document).ready(function() {
     });
 
     // third chart initialization
-    chart1 = new Highcharts.Chart({
+    chart3 = new Highcharts.Chart({
      chart: {
         renderTo: 'chart_3',
         type: 'column',
@@ -127,6 +127,47 @@ $(document).ready(function() {
         name: 'Dev #3',
         data: [1, 3, 6, 0, 50, 25, 50, 60, 30, 100]
      }]
+    });
+
+    // Fourth chart initialization (pie chart)
+    chart4 = new Highcharts.Chart({
+        chart: {
+            renderTo: 'chart_4',
+            plotBackgroundColor: null,
+            plotBorderWidth: null,
+            plotShadow: false,
+            height: 350,
+        },
+        title: {
+            text: 'Pie chart diagram for router stats'
+        },
+        tooltip: {
+            pointFormat: '<b>{point.percentage}%</b>',
+            percentageDecimals: 1
+        },
+        plotOptions: {
+            pie: {
+                allowPointSelect: true,
+                cursor: 'pointer',
+                dataLabels: {
+                    enabled: false
+                },
+                showInLegend: true
+            }
+        },
+         series: [{
+         type: 'pie',
+            name: 'Dev #4',
+            data: [
+                ['0.6~exp20140811', 5],
+                ['2014.4a~20150315-beta', 10],
+                ['2014.4~exp20150206', 20],
+                ['2014.4~stable20150206', 22],
+                ['Raspbian', 25],
+                ['site-2014.4~exp20150215', 28],
+                ['snapshot~exp20150314', 30],
+            ]
+         }]
     });
 
     // Switchers (of the Chart1 type) - onclick handler
